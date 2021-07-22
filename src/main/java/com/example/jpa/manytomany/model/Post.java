@@ -1,6 +1,11 @@
+/*
+ * Copyright (c) Jordy Coder
+ */
+
 package com.example.jpa.manytomany.model;
 
 
+import com.example.jpa.manytomany.audit.AuditModel;
 import com.sun.istack.NotNull;
 import lombok.Getter;
 import lombok.Setter;
@@ -16,7 +21,7 @@ import java.util.Set;
 @Setter
 @Entity
 @Table(name = "posts")
-public class Post {
+public class Post extends AuditModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -66,5 +71,4 @@ public class Post {
         this.content = content;
     }
 
-    // Getters and Setters (Omitted for brevity)
 }

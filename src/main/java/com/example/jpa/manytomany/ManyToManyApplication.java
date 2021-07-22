@@ -1,21 +1,27 @@
+/*
+ * Copyright (c) Jordy Coder
+ */
+
 package com.example.jpa.manytomany;
 
 import com.example.jpa.manytomany.model.Post;
 import com.example.jpa.manytomany.model.Tag;
 import com.example.jpa.manytomany.repository.PostRepository;
 import com.example.jpa.manytomany.repository.TagRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@AllArgsConstructor
 @SpringBootApplication
 public class ManyToManyApplication implements CommandLineRunner {
-    @Autowired
-    private TagRepository tagRepository;
 
-    @Autowired
-    private PostRepository postRepository;
+
+    private final TagRepository tagRepository;
+
+    private final PostRepository postRepository;
 
     public static void main(String[] args) {
         SpringApplication.run(ManyToManyApplication.class, args);

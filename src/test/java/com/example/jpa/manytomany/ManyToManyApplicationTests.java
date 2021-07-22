@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) Jordy Coder
+ */
+
 package com.example.jpa.manytomany;
 
 import org.junit.jupiter.api.Test;

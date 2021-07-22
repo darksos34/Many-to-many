@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) Jordy Coder
+ */
+
 package com.example.jpa.manytomany.repository;
 
 import com.example.jpa.manytomany.model.Tag;

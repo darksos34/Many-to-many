@@ -1,6 +1,11 @@
+/*
+ * Copyright (c) Jordy Coder
+ */
+
 package com.example.jpa.manytomany.model;
 
-import com.example.jpa.manytomany.model.Post;
+import com.example.jpa.manytomany.audit.AuditModel;
+
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.NaturalId;
@@ -15,7 +20,7 @@ import java.util.Set;
 @Setter
 @Entity
 @Table(name = "tags")
-public class Tag {
+public class Tag extends AuditModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -41,5 +46,5 @@ public class Tag {
         this.name = name;
     }
 
-    // Getters and Setters (Omitted for brevity)
+
 }
